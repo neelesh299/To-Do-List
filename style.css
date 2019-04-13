@@ -1,92 +1,91 @@
 @charset "UTF-8";
 
 body {
-  background: #edf0f1;
-  padding: 80px 0 0 0;
+  	background: #edf0f1;
+  	padding: 80px 0 0 0;
 }
 
 body, input, button {
-  font-family: 'Roboto', sans-serif;
+  	font-family: 'Roboto', sans-serif;
 }
 
 .noFill {
-  fill: none;
+  	fill: none;
 }
 
 header {
-  width: 100%;
-  height: 80px;
-  position: fixed;
-  padding: 15px;
-  top: 0;
-  left: 0;
-  z-index: 5;
+  	width: 100%;
+	height: 80px;
+	position: fixed;
+	padding: 15px;
+	top: 0;  
+	left: 0;
+	z-index: 5;
 
-  background: #25b99a;
-  box-shadow: 0px 2px 4px rgba(44, 62, 80, 0.15);
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px;
+	background: #25b99a;
+	box-shadow: 0px 2px 4px rgba(44, 62, 80, 0.15);
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;    
 }
 
 input {
-  width: 100%;
-  height: 50px;
-  float: left;
-  color: #fff;
-  font-size: 15px;
-  font-weight: 400;
-  text-indent: 18px;
-  padding: 0 60px 0 0;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 5px 25px 25px 5px;
-  border: 0px;
-  box-shadow: none;
-  outline: none;
-
-  -webkit-appearance: none;
-  -moz-appearance: none;
+	width: 100%;
+	height: 50px;
+	float: left;
+	color: #fff;
+	font-size: 15px;
+	font-weight: 400;
+	text-indent: 18px;
+	padding: 0 60px 0 0;
+	background: rgba(255, 255, 255, 0.2);
+	border-radius: 5px 25px 25px 5px;
+	border: 0px;
+	box-shadow: none;
+	outline: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
 }
 
 header input::-webkit-input-placeholder {
-  color: rgba(255, 255, 255, 0.75);
+  	color: rgba(255, 255, 255, 0.75);
 }
 
 header input:-moz-input-placeholder {
-  color: rgba(255, 255, 255, 0.75);
+  	color: rgba(255, 255, 255, 0.75);
 }
 
 header input::-moz-input-placeholder {
-  color: rgba(255, 255, 255, 0.75);
+  	color: rgba(255, 255, 255, 0.75);
 }
 
 header input:-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.75);
+  	color: rgba(255, 255, 255, 0.75);
 }
 
 header button {
-  width: 50px;
-  height: 50px;
-  position:absolute;
-  top:15px;
-  right:15px;
-  z-index:2;
-  color: #25b99a;
-  font-size: 15px;
-  font-weight: 400;
+  	width: 50px;
+  	height: 50px;
+  	position:absolute;
+  	top:15px;
+  	right:15px;
+  	z-index:2;
+  	color: #25b99a;
+  	font-size: 15px;
+  	font-weight: 400;
 
 
-  border-radius: 25px;
-  background: #fff;
-  border: 0px;
-  box-shadow: none;
-  outline: none;
-  cursor: pointer;
+  	border-radius: 25px;
+  	background: #fff;
+  	border: 0px;
+  	box-shadow: none;
+  	outline: none;
+  	cursor: pointer;
 
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  -o-appearance: none;
-  appearance:none;
+  	-webkit-appearance: none;
+  	-moz-appearance: none;
+  	-ms-appearance: none;
+  	-o-appearance: none;
+  	appearance:none;
 }
 
 .container{
@@ -183,7 +182,7 @@ ul.todo#completed li{
 	text-decoration: line-through;
 }
 
-ul.todo#completed:not(:empty):before{
+ul.todo#completed:before{
 	content: '';
 	width: 150px;
 	height: 1px;
@@ -192,4 +191,21 @@ ul.todo#completed:not(:empty):before{
 	top: 30px;
 	left: 50%;
 	margin: 0 0 0 -75px;
+}
+
+ul.todo#todo:empty:after{
+	content:'No tasts to complete!';
+	margin: 15px 0 0 0;
+}
+
+ul.todo#completed:empty:after{
+	content:'No completed tasts!';
+}
+ul.todo#todo:after,
+ul.todo#completed:after{
+	width: 100%;
+	display: block;
+	text-align: center;
+	font-size: 12px;
+	color: #aaa;
 }
